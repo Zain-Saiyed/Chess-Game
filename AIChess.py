@@ -1,4 +1,4 @@
-import pygame, time, chess,random
+import pygame, time, chess,random, sys
 from collections import Counter
 
 pygame.init()
@@ -145,7 +145,7 @@ def Draw_Borders(value,colour):
 
 def quitgame():
      pygame.quit()
-     quit() 
+     sys.exit()
 
 # Function to Print the Value of the current positon Eg. a5,e6 etc
 def print_pos(mouse_pointer):
@@ -176,25 +176,31 @@ def message_to_screen(msg,color,xPos,yPos,y_displace=0,size = "small"):
     
 #Dispaly button on screen
 def button(msg,x,y,breadth,height,lowcol,hicol,action=None):
-     mouse = pygame.mouse.get_pos()
-     click = pygame.mouse.get_pressed()
-     if x + breadth > mouse[0] >x and y+height > mouse[1] > y:
+    try:
+        mouse = pygame.mouse.get_pos()
+        click = pygame.mouse.get_pressed()
+        if x + breadth > mouse[0] >x and y+height > mouse[1] > y:
         #   pygame.draw.rect(gameDisplay, lowcol,(x,y,breadth,height))
-          round_rect(gameDisplay,x,y,breadth,height,lowcol)
+            round_rect(gameDisplay,x,y,breadth,height,lowcol)
 
-          if click[0] == 1 and action !=None:
-              for event in pygame.event.get():
+            if click[0] == 1 and action !=None:
+                for event in pygame.event.get():
                     if event.type == pygame.MOUSEBUTTONUP:
                         action()             
-     else:
+        else:
         #   pygame.draw.rect(gameDisplay, hicol ,(x,y,breadth,height))
             round_rect(gameDisplay,x,y,breadth,height,hicol)
 
-     smallText = pygame.font.Font('gameFonts/calibri.ttf',20)
-     textSurf, textRect = text_objects(msg,black,'small')
-     ##adding text on button
-     textRect.center = ((x+(breadth/2)),(y+(height/2)))
-     gameDisplay.blit(textSurf,textRect)
+        smallText = pygame.font.Font('gameFonts/calibri.ttf',20)
+        textSurf, textRect = text_objects(msg,black,'small')
+        ##adding text on button
+        textRect.center = ((x+(breadth/2)),(y+(height/2)))
+        gameDisplay.blit(textSurf,textRect)
+        pygame.display.update()
+    except:
+        pass
+
+
      
 def round_rect(gameDisplay,x,y,length,breadth,color,radius = 10 ):
     xpos = int(x + radius)
@@ -593,6 +599,7 @@ def paused():
 
                 if event.key == pygame.K_q:
                     quitgame()
+
         clock.tick(10)
         
 
@@ -610,7 +617,7 @@ def paused():
 ##        for event in pygame.event.get():
 ##            if event.type == pygame.QUIT:
 ##                pygame.quit()
-##                quit()
+##                sys.exit()
 ##            if event.type == pygame.KEYDOWN:
 ##                if event.key == pygame.K_a:
 ##                    choice = 'negamax'
@@ -618,7 +625,7 @@ def paused():
 ##                    choice = 'random'
 ##                if event.key == pygame.K_q:
 ##                    pygame.quit()
-##                    quit()
+##                    sys.exit()
 ##        return choice
         
 def game_intro():
@@ -638,14 +645,14 @@ def game_intro():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_s:
 ##                    choice = choose_option()
                     intro = False
                 if event.key == pygame.K_q:
                     pygame.quit()
-                    quit()
+                    sys.exit()
         clock.tick(10)
 
 def game_ex(player):
@@ -665,11 +672,11 @@ def game_ex(player):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_q:
                     pygame.quit()
-                    quit()
+                    sys.exit()
                 if event.key == pygame.K_r:
                     board.clear()
                     board.clear_stack()
@@ -714,7 +721,7 @@ def gameLoop():
                         gameLoop()
                         
         button("QUIT",730,525,140,50,red,lred,quitgame) 
-        pygame.display.update()
+        
         if board.turn is chess.WHITE:            
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:

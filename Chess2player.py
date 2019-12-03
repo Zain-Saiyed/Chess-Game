@@ -1,4 +1,4 @@
-import pygame, time, chess, copy, threading
+import pygame, time, chess, copy, threading, sys
 
 pygame.init()
 pygame.font.init()
@@ -33,10 +33,10 @@ mate_list_b=[]
 blue,white, black, grey,red,lgreen,lred,green = (0,0,255),(255, 255, 255), (0, 0, 0), (83, 83, 83, 50),(255,0,0),(0,200,0),(200,0,0),(0,255,0)
 Exit, intro = False,True
 clock = pygame.time.Clock()
-smallfont = pygame.font.Font("GeorgiaPro-BlackItalic.ttf", 25)
-medfont = pygame.font.Font("GeorgiaPro-BlackItalic.ttf", 50)
-largefont = pygame.font.Font("GeorgiaPro-BlackItalic.ttf", 80)
-Elargefont = pygame.font.Font("OLDENGL.ttf", 80)
+smallfont = pygame.font.Font("gameFonts/GeorgiaPro-BlackItalic.ttf", 25)
+medfont = pygame.font.Font("gameFonts/GeorgiaPro-BlackItalic.ttf", 50)
+largefont = pygame.font.Font("gameFonts/GeorgiaPro-BlackItalic.ttf", 80)
+Elargefont = pygame.font.Font("gameFonts/OLDENGL.ttf", 80)
 alphabets = { 'a':0,'b':1,'c':2,'d':3,'e':4,'f':5,'g':6,'h':7 }
 # draws Chessboard
 # Initial printing of Boards and chess pieces
@@ -229,7 +229,8 @@ class pieces:
                 
 def quitgame():
      pygame.quit()
-              
+     sys.exit()
+     
 ##This is the end of class functions-----------------------------------------------------------------------------------------|         
 def text_objects(text,color,size):
     if size=='small':
@@ -513,6 +514,7 @@ def main():
     gameLoop()
 
 main()
+sys.exit()
 
 #--------------------------------------------------------------------------------------------------------------------
 ##    'br1', 'bh1', 'bb1', 'bq',

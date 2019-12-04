@@ -43,6 +43,8 @@ This repository contains the 2-player chess and AI chess game implemented in Pyt
 <br><br>
 ![picture](gameplay4.JPG)
 <br><br>
+
+<hr>
 ### Functionalities offered in game?
 Steps to be followed:
 <br><br>1. Press **P** to pause game play.
@@ -50,14 +52,14 @@ Steps to be followed:
 <br><br>3. Press **U** to undo a move played by player/user (White Player).
 <br><br>4. Press **X** to restart the game. (Works only when on Pause screen.)
 <br><br>5. Press **R** to resume game play. (Works only when on Pause screen.)
-
+<hr>
 ### How to play AI Chess game?
 Steps to be followed:
 <br><br>1. Download or Clone the repository.
 <br><br>2. Extract all the contents of this zip file downloaded. 
 <br><br>3. <b>Navigate</b> to `AI Chess EXE folder` , which contains the executable (*AIChess.exe*) file that can be run on Windows OS without the user/player downloading any dependencies.
 <br><br>4. Double Click or Run " **AIChess.exe** " to play the game.
-
+<hr>
 ### How to play two player Chess game?
 Steps to be followed:
 <br><br>1. Download or Clone the repository.
@@ -68,11 +70,13 @@ Steps to be followed:
 
 ## Approach
 
-Mini-Max Algorithm is used to search the best possible move playable by AI to maximise its own probability of winning and maximising the opponents probability of losing. Moreover the rank/weight/profit of the piece at each position of the board is used to calculate the best move. Python programming language was used to implement this. Pygame module was used for GUI, wherein user can drag pieces to play a move. Since the search algorithm is slow in finding move, so in order to speed things up the `python-chess` library ([Link to python-chess module] :https://github.com/niklasf/python-chess) was used for the gameplay backend for getting the chess notations and possible moves. Thereby reducing the time taken for calculating users possible moves, game board updation, and played moves updation. *Significant time and resource reduction.* 
+Mini-Max Algorithm is used to search the best possible move playable by AI to maximise its own probability of winning and maximising the opponents probability of losing. Moreover the rank/weight/profit of the piece at each position of the board is used to calculate the best move. Python programming language was used to implement this. Pygame module was used for GUI, wherein user can drag pieces to play a move. Since the search algorithm is slow in finding move, so in order to speed things up the `python-chess` library (https://github.com/niklasf/python-chess) was used for the gameplay backend for getting the chess notations and possible moves. Thereby reducing the time taken for calculating users possible moves, game board updation, and played moves updation. *Significant time and resource reduction.* 
 <br><br>
 To run the python scripts the folowing modules need to be pre-installed:<br>
-`pip install pygame`<br>
-`pip install python-chess`
+```
+pip install pygame 
+pip install python-chess
+```
 <br><br>
 The ranks or the weights that the algorithm uses for searching move is as follows: 
 <br>

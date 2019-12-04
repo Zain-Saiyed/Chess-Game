@@ -42,24 +42,25 @@ This repository contains the 2-player chess and AI chess game implemented in Pyt
 9. It may happen that when you play a move the game play window may stop responding. And this is because the program is still searching the best possible move. ****So Please do not cancel or close the window, the move is being calculated and searched and it WILL be played!****
 <br><br>
 ![picture](gameplay4.JPG)
-<br><br>
-
+<br>
 <hr>
-### Functionalities offered in game?
+<br>
+
+## Functionalities offered in game?
 Steps to be followed:
 <br><br>1. Press **P** to pause game play.
 <br><br>2. Press **Q** to Quit game play. (Works during game play as well as on Pause screen.)
 <br><br>3. Press **U** to undo a move played by player/user (White Player).
 <br><br>4. Press **X** to restart the game. (Works only when on Pause screen.)
 <br><br>5. Press **R** to resume game play. (Works only when on Pause screen.)
-<hr>
+<br><hr><br>
 ### How to play AI Chess game?
 Steps to be followed:
 <br><br>1. Download or Clone the repository.
 <br><br>2. Extract all the contents of this zip file downloaded. 
 <br><br>3. <b>Navigate</b> to `AI Chess EXE folder` , which contains the executable (*AIChess.exe*) file that can be run on Windows OS without the user/player downloading any dependencies.
 <br><br>4. Double Click or Run " **AIChess.exe** " to play the game.
-<hr>
+<br><hr><br>
 ### How to play two player Chess game?
 Steps to be followed:
 <br><br>1. Download or Clone the repository.
@@ -144,7 +145,7 @@ king_endgame_table = [-50, -40, -30, -20, -20, -30, -40, -50,
 ### Future Improvements:
 Using Alpha-beta Pruning algorithm to further reducing time taken to search moves. Use of Reinforced Learning or a Deep Learning based approach to compute best move to be played and to achieve a high accuracy in minimum amount of time.
 
-<hr>
+<br><hr>
 
 
 

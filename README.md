@@ -1,10 +1,24 @@
 # Chess Game
 Chess is one of the world’s most popular and the oldest strategic board game played. Over the years many organizations and communities have taken many efforts to create a AI that calculates the best possible move for maximising it's own probability/profit to win while maximising the opponents probability to Lose.    
 
-### Overview
+## Overview
 This repository contains the 2-player chess and AI chess game implemented in Python programming language. In addition to this it also contains the executable files (in folders `2-Player Chess EXE` and `AI Chess EXE`) for the same so that any user can play the game without having to download Python and rest of the dependencies required to run the python scripts.
 <br>
-### Guide on Gameplay UI :
+## Download and Play?
+#### Windows:
+1.  [Click to Download AI Chess .](https://drive.google.com/drive/folders/1_ZUq4O-vf4sQeMYSGwchKfc7MvtDg6Zn?usp=sharing) 
+2.  [Click to Download 2 player Chess.](https://drive.google.com/drive/folders/1Py8Vt4Dg-B9vY3i0wEr9hOyDS2YdXV9s?usp=sharing)
+
+## Functionalities offered in game?
+Steps to be followed:
+<br><br>1. Press **P** to pause game play.
+<br><br>2. Press **Q** to Quit game play. (Works during game play as well as on Pause screen.)
+<br><br>3. Press **U** to undo a move played by player/user (White Player).
+<br><br>4. Press **X** to restart the game. (Works only when on Pause screen.)
+<br><br>5. Press **R** to resume game play. (Works only when on Pause screen.)
+<br>
+
+## Guide on Gameplay UI :
 1. Welcome Screen
 <br><br>
 ![picture](welcome.JPG)
@@ -46,22 +60,14 @@ This repository contains the 2-player chess and AI chess game implemented in Pyt
 <hr>
 <br>
 
-## Functionalities offered in game?
-Steps to be followed:
-<br><br>1. Press **P** to pause game play.
-<br><br>2. Press **Q** to Quit game play. (Works during game play as well as on Pause screen.)
-<br><br>3. Press **U** to undo a move played by player/user (White Player).
-<br><br>4. Press **X** to restart the game. (Works only when on Pause screen.)
-<br><br>5. Press **R** to resume game play. (Works only when on Pause screen.)
-<br><hr><br>
-### How to play AI Chess game?
+## How to play AI Chess game?
 Steps to be followed:
 <br><br>1. Download or Clone the repository.
 <br><br>2. Extract all the contents of this zip file downloaded. 
 <br><br>3. <b>Navigate</b> to `AI Chess EXE folder` , which contains the executable (*AIChess.exe*) file that can be run on Windows OS without the user/player downloading any dependencies.
 <br><br>4. Double Click or Run " **AIChess.exe** " to play the game.
 <br><hr><br>
-### How to play two player Chess game?
+## How to play two player Chess game?
 Steps to be followed:
 <br><br>1. Download or Clone the repository.
 <br><br>2. Extract all the contents of this zip file downloaded. 
@@ -78,7 +84,7 @@ To run the python scripts the folowing modules need to be pre-installed:<br>
 pip install pygame 
 pip install python-chess
 ```
-<br><br>
+<br>
 The ranks or the weights that the algorithm uses for searching move is as follows: 
 <br>
 ```

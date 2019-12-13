@@ -86,7 +86,7 @@ pip install python-chess
 ```
 <br>
 The ranks or the weights that the algorithm uses for searching move is as follows: 
-<br>
+
 ```
 pawn_table =    [0, 0, 0, 0, 0, 0, 0, 0,
                  50, 50, 50, 50, 50, 50, 50, 50,
